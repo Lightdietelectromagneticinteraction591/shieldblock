@@ -86,7 +86,7 @@
 1. Open Chrome and navigate to `chrome://extensions`
 2. Enable **Developer mode** (top-right toggle)
 3. Click **Load unpacked**
-4. Select the `ad-blocker-extension/` folder
+4. Select the cloned `shieldblock/` folder
 5. The ShieldBlock icon appears in your toolbar
 
 
@@ -95,7 +95,7 @@
 ## Project Structure
 
 ```
-ad-blocker-extension/
+shieldblock/
 ├── manifest.json                   # MV3 manifest
 ├── background/
 │   └── service-worker.js           # Stats, badge, dynamic rules, messaging
